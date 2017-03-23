@@ -1,0 +1,72 @@
+<!-- Add Author Section -->
+<section class ="boxView col-md-11 col-xs-12 col-md-offset-1" ng-controller = "addnewauthorcontroller">
+		<form name =  "myForm" class = "col-md-7 col-xs-12 col-md-offset-1" ng-model = "newAuthor" novalidate>
+			<div class = "form-group"><!-- For Author Id-->
+			
+				<label for ="authorId">
+					Author Id
+				</label>
+				
+				<input class = "form-control" id = "authorId" placeholder = "Author Id" ng-model = "newAuthor.Id" disabled	/>
+			</div>
+			<div class = "form-group"><!-- For Author name -->
+				<label for ="authorName">
+					Name<span class = "redmarker glyphicon glyphicon-asterisk"></span>
+				</label>
+				<input  name = "authorName" class = "form-control" id = "authorName" placeholder = "Name" ng-model = "newAuthor.AuthorName" type = "text" required ng-minlength = '3'/>
+				<span class = "error-class" ng-show = "myForm.authorName.$touched && myForm.authorName.$invalid">
+						Enter valid Author name.
+				</span>
+			</div>
+			 
+			
+			<div class = "form-group">
+				<label for ="authorEmail">
+					Email
+				</label>
+				<input type = "email" name = "Email" class = "form-control" id = "authorEmail" placeholder = "Author Email" ng-model = "newAuthor.Email"  />
+				<span class = "error-class" ng-show = "myForm.Email.$touched && myForm.Email.$invalid">
+						Enter  valid Email Id.
+				</span>
+			</div>
+			<div class = "form-group">
+				<label for ="authorDepartment">
+					Department
+				</label>
+				<input type = "text" name = "department" class = "form-control" id = "authorDepartment"  placeholder = "Author Department" ng-model = "newAuthor.Department"/>
+			</div>
+			<div class = "form-group">
+				<label for ="authorWebsite">
+					Author Website
+				</label>
+				<input text = "url" name = "website" class = "form-control" id = "authorWebsite" placeholder = "Author Website" ng-model = "newAuthor.Website" />
+				<span class = "error-class" ng-show = "myForm.website.$touched && myForm.website.$error.url">
+						Enter valid URL;
+				</span>
+			</div>
+			
+			<div class = "form-group">
+				<label for ="authorSkills">
+					Author Skills
+				</label>
+				<input class = "form-control" id = "authorSkills" placeholder = "Author Skills" ng-model = "newAuthor.Skills" />
+			</div>
+			
+			<div>
+				<button ng-click = "addAuthor()" class = "btn btn-success" ng-disabled = "myForm.website.$invalid || myForm.authorName.$invalid || myForm.Email.$invalid || myForm.website.invalid">
+				<span class = "glyphicon glyphicon-floppy-disk"></span>
+				Add Author.
+				</button>
+			</div>
+			
+		<div class = "">
+			<span> 
+				Field mark with 
+					<span class = "redmarker glyphicon glyphicon-asterisk"></span>
+				are manadatory.
+			</span>
+		</div>
+		</form>
+		
+</section>
+<!-- End of Section -->

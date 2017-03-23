@@ -1,0 +1,33 @@
+
+<table class = "table table-bordered searchtable">
+	
+		<tr>
+			
+			<th>
+				<span ng-class = 'thIcon[0]'></span><a ng-click = "thClicked(0, 'ISBN')">ISBN</a>
+			</th>
+			
+			<th>
+				<span ng-class = 'thIcon[1]'></span>
+					<a ng-click = "thClicked(1,'BookTitle')">
+						Book Title
+					</a>
+			</th>
+			
+			<th>
+				<span ng-class = 'thIcon[2]'></span>
+					<a ng-click = "thClicked(2, 'AuthorName')">
+						Author Name
+					</a>
+			</th>
+		</tr>
+		<tr ng-repeat = "x in tablecontent | orderBy:sortOrder:direction| filter:searchText">
+			<td >
+				<a  ng-click = "bookDetails($event)" href = "#bookdetails" id = "{{x.ISBN}}">{{x.ISBN}}</a>
+			</td>
+			<td>{{x.BookTitle}}</td>
+			<td >
+				<a href = "#authordetails" ng-click = "authorDetails($event)" id = "{{x.authorId}}">{{x.AuthorName}}</a>
+			</td>
+		</tr>
+</table>

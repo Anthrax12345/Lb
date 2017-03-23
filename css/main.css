@@ -1,0 +1,211 @@
+/* line 2, ../sass/elements/_block.scss */
+body {
+  margin: 5px auto;
+  /*
+  background: linear-gradient($headerbackgroundcolor, #ffffff);
+  background-repeat: no-repeat;*/
+}
+
+/* line 13, ../sass/elements/_block.scss */
+.content {
+  margin-top: 10px;
+}
+
+/*
+	This is bootstrap class with some modification.
+*/
+/* line 7, ../sass/elements/_table.scss */
+.table-bordered tr {
+  transition: all linear 0.2s;
+}
+/* line 13, ../sass/elements/_table.scss */
+.table-bordered tr th a {
+  color: #00695c;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+/* line 20, ../sass/elements/_table.scss */
+.table-bordered tr:hover {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  font-size: 1.2em;
+  transition: all linear 0.2s;
+}
+/* line 27, ../sass/elements/_table.scss */
+.table-bordered tr th:hover {
+  cursor: pointer;
+}
+/* line 31, ../sass/elements/_table.scss */
+.table-bordered tr:nth-child(odd) {
+  background-color: rgba(170, 170, 170, 0.4);
+}
+/* line 36, ../sass/elements/_table.scss */
+.table-bordered tr td a {
+  text-decoration: none;
+  color: inherit;
+  transition: all linear 0.2s;
+}
+/* line 41, ../sass/elements/_table.scss */
+.table-bordered tr td a:hover {
+  text-decoration: italic;
+  color: #00695c;
+  transition: all linear 0.2s;
+}
+
+/* line 2, ../sass/elements/_search.scss */
+.searchArea {
+  margin-bottom: 10px;
+  border: solid 3px #ccc;
+  border-radius: 10px;
+}
+/* line 6, ../sass/elements/_search.scss */
+.searchArea span {
+  color: red;
+}
+/* line 9, ../sass/elements/_search.scss */
+.searchArea span button {
+  background-color: #fff;
+  margin-right: 2px;
+}
+/* line 15, ../sass/elements/_search.scss */
+.searchArea input {
+  border: none;
+  color: #B82601;
+  font-size: 20px;
+  font-family: "Times New Roman", Georgia, Serif;
+}
+/* line 21, ../sass/elements/_search.scss */
+.searchArea input:focus {
+  box-shadow: inset 0 1px 1px transparent, 0 0 0px transparent;
+}
+/* line 25, ../sass/elements/_search.scss */
+.searchArea .searchIcon {
+  background-color: #fff;
+  padding-left: 10px;
+  border: none;
+}
+/* line 30, ../sass/elements/_search.scss */
+.searchArea:active, .searchArea:hover {
+  /*box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);*/
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(225, 100, 0, 0.78);
+}
+
+/* line 2, ../sass/elements/_details.scss */
+.detailSection {
+  padding: 5px;
+}
+/* line 4, ../sass/elements/_details.scss */
+.detailSection .row {
+  margin: 20px 5px 10px 5px;
+  border: solid 1px #00695c;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #00695c, #fff);
+  color: #fff;
+}
+/* line 11, ../sass/elements/_details.scss */
+.detailSection .row:hover {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  transition: all linear 0.2s;
+}
+
+/* line 17, ../sass/elements/_details.scss */
+.editSection {
+  margin-top: 25px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+  padding-bottom: 25px;
+  padding-top: 25px;
+  transition: all linear 0.5s;
+  border: solid 1px #000;
+}
+
+/*
+	For material design button
+	removing margin so it align properly.
+*/
+/* line 5, ../sass/buttons/_buttons.scss */
+md-button {
+  margin: 0 !IMPORTANT;
+}
+
+/* line 9, ../sass/buttons/_buttons.scss */
+.md-button:not([disabled]):hover {
+  background-color: rgba(201, 48, 44, 0.7);
+}
+
+/*Upper content of dialog box.*/
+/* line 4, ../sass/dialog/_materialdesignoptiondialog.scss */
+md-dialog .md-dialog-content {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/*Button section of dialog box.*/
+/* line 9, ../sass/dialog/_materialdesignoptiondialog.scss */
+md-dialog .md-actions, md-dialog md-dialog-actions {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* line 13, ../sass/dialog/_materialdesignoptiondialog.scss */
+a.md-button.md-default-theme:not([disabled]):hover, a.md-button:not([disabled]):hover, .md-button.md-default-theme:not([disabled]):hover, .md-button:not([disabled]):hover {
+  background-color: white;
+}
+
+/* line 17, ../sass/dialog/_materialdesignoptiondialog.scss */
+a.md-button.md-default-theme.md-primary, a.md-button.md-primary, .md-button.md-default-theme.md-primary, .md-button.md-primary {
+  background-color: white;
+}
+
+/* line 22, ../sass/dialog/_materialdesignoptiondialog.scss */
+a.md-button.md-default-theme:not([disabled]):hover, a.md-button:not([disabled]):hover, .md-button.md-default-theme:not([disabled]):hover, .md-button:not([disabled]):hover {
+  background-color: rgba(158, 158, 158, 0.2);
+}
+
+/* line 2, ../sass/header/_header.scss */
+.header {
+  background-color: #00695c;
+  padding: 0;
+}
+/* line 7, ../sass/header/_header.scss */
+.header header ul
+li
+a {
+  color: #fff;
+  margin: 10px 10px 0 10px;
+}
+
+/*navigations */
+/* line 17, ../sass/header/_header.scss */
+.nav > li > a:focus, .nav > li > a:hover {
+  background-color: rgba(0, 105, 92, 0.9);
+}
+
+/* line 22, ../sass/header/_header.scss */
+.glyphicon-triangle-bottom:before, .glyphicon-triangle-top:before {
+  color: #e57373;
+}
+
+/* line 2, ../sass/label/_label.scss */
+label {
+  color: rgba(108, 6, 234, 0.78);
+}
+
+/* line 2, ../sass/elements/_boxview.scss */
+.boxView {
+  border: solid 1px black;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+  padding: 20px 0;
+}
+
+/* line 1, ../sass/elements/_error.scss */
+.error-class {
+  color: red;
+}
+
+/* line 4, ../sass/elements/_error.scss */
+.redmarker {
+  color: red;
+  font-size: 6px;
+  vertical-align: super;
+  padding-left: 3px;
+}
+
+/*# sourceMappingURL=main.css.map */

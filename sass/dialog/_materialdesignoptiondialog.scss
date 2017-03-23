@@ -1,0 +1,36 @@
+@import "variables/_colors.scss";
+
+/*Upper content of dialog box.*/
+
+md-dialog .md-dialog-content {
+    background: rgba(white, 0.5);
+}
+
+
+/*Button section of dialog box.*/
+
+md-dialog .md-actions,
+md-dialog md-dialog-actions {
+    background: rgba(white, 0.5);
+}
+
+a.md-button.md-default-theme:not([disabled]):hover,
+a.md-button:not([disabled]):hover,
+.md-button.md-default-theme:not([disabled]):hover,
+.md-button:not([disabled]):hover {
+    background-color: white;
+}
+
+a.md-button.md-default-theme.md-primary,
+a.md-button.md-primary,
+.md-button.md-default-theme.md-primary,
+.md-button.md-primary {
+    background-color: white;
+}
+
+a.md-button.md-default-theme:not([disabled]):hover,
+a.md-button:not([disabled]):hover,
+.md-button.md-default-theme:not([disabled]):hover,
+.md-button:not([disabled]):hover {
+    background-color: rgba(158, 158, 158, 0.2);
+}

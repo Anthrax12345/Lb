@@ -1,0 +1,19 @@
+
+<div class ="row content" id = "contentSection" ng-controller = "homepagecontroller">
+	<div class = " col-xs-10 col-md-10 col-md-offset-1 col-xs-offset-1">
+		<div class = "input-group searchArea">
+		 <span class="input-group-addon searchIcon">
+			<label class ="glyphicon glyphicon-search" for = "search"></label>
+		 </span>
+			<input  id = "search" type = "text" id = "searchData" ng-model = "searchText" class = "form-control" placeholder = "Search books by ISBN, Name & Author name."/>
+			<span class = "input-group-btn cancelbutton">
+				<button class = "btn btndefault" type = "button" ng-click = "searchText =''">
+					<span class = "glyphicon glyphicon-remove-sign"></span>
+				</button>
+			</span>
+		</div>
+	</div>
+	
+	
+	<ank-search-table  booksrc = "books"></ank-search-table>
+</div>

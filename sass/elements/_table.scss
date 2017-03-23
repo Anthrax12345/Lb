@@ -1,0 +1,39 @@
+/* This is bootstrap class with some modification. */
+
+@import "variables/_colors.scss";
+.table-bordered {
+    tr {
+        transition: all linear 0.2s;
+        th {
+            a {
+                color: $headerbackgroundcolor;
+                text-decoration: underline;
+                text-transform: uppercase;
+            }
+        }
+        &:hover {
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            font-size: 1.2em;
+            transition: all linear 0.2s;
+        }
+        th:hover {
+            cursor: pointer;
+        }
+        &:nth-child(odd) {
+            background-color: rgba(#AAA, 0.4);
+        }
+        td {
+            a {
+                text-decoration: none;
+                color: inherit;
+                transition: all linear 0.2s;
+            }
+            a:hover {
+                text-decoration: italic;
+                color: $headerbackgroundcolor;
+                transition: all linear 0.2s;
+            }
+            a:visited {}
+        }
+    }
+}

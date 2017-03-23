@@ -1,0 +1,26 @@
+@import "variables/_colors.scss";
+.header {
+    background-color: #00695c;
+    padding: 0;
+    header {
+        ul li a {
+            color: #fff;
+            margin: 10px 10px 0 10px;
+        }
+    }
+}
+
+
+/*navigations */
+
+.nav>li>a:focus,
+.nav>li>a:hover {
+    background-color: rgba($headerbackgroundcolor, 0.9);
+}
+
+.glyphicon-triangle-bottom,
+.glyphicon-triangle-top {
+    &:before {
+        color: $thfontcolor;
+    }
+}

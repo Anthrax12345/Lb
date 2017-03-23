@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<meta name="theme-color" content="#6c06ea">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+		<title> LMS </title>
+		<!-- Angular JS files-->
+		<script src = "js/angular.js"></script>
+		
+		<script src = "js/angular-route.js"></script>
+		
+		
+		<!-- Angular JS Material Look -->
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.7/angular-material.js"></script>
+		<script src = "js/index.js"></script>
+		<!-- Angular Material style sheet -->
+		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.css">
+		
+		
+		<link rel ="stylesheet" href = "css/bootstrap.min.css">
+		<link rel = "stylesheet" href = "css/main.css">
+		<link rel = "icon" href = "img/icon.png">
+		
+		<!-- for angular material design -->
+		
+		
+	</head>
+		
+		
+	<body ng-app = "MyApp">
+		<div class ="container ParentContainer" ng-controller = "mainController" >
+			<!-- Header of page -->
+			<div class ="row header">
+				<header class = "col-md-11 col-xs-12 header" >
+					<ul class="nav nav-tabs">
+						<li role="presentation" ng-class = 'links[0]' ng-click = "linksClicked(0)">
+							<a href="#/"  >
+								<span class ="glyphicon glyphicon-home"></span>
+								Home
+							</a>
+						</li>
+						<li role="presentation" ng-class = 'links[1]' ng-click = "linksClicked(1)">
+							<a href="#addnewbook"  >
+								<span class ="glyphicon glyphicon-book"></span>
+								Add New Book
+							</a>
+						</li>
+						<li role="presentation"   ng-class = 'links[2]' ng-click = "linksClicked(2)">
+							<a href="#addnewauthor" >
+									<span class = "glyphicon glyphicon-user"></span>
+									Add New Author
+							</a>
+						</li>
+					</ul>
+				</header>
+			</div>
+			
+			<!-- End of header Section -->
+			
+			
+			<!-- Main Content-->
+			<div class = "row">
+				<div ng-view class = "col-md-10 col-md-offset-1 col-xs-12">
+				</div>
+			</div>
+			<!-- End of Content-->
+			
+			
+		</div>
+		
+	</body>
+</html>

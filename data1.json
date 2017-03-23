@@ -1,0 +1,151 @@
+ { 
+	"libary": {
+		"Books":[
+			{
+			  "ISBN": 7894561230,
+			  "BookTitle": "Automative Mechanics",
+			  "authorId": 3,
+			  "price": 700,
+			  "availableOn": "2017-1-26",
+			  "bookImage" : "img/books/1.jpg"
+			},
+			 {
+			  "ISBN": 5894521237,
+			  "BookTitle": "Inspiring Thoughts",
+			  "authorId": 4,
+			  "price": 900,
+			  "availableOn": "2016-12-26",
+			   "bookImage" : "img/books/2.jpg"
+			}, 
+			{
+			  "ISBN": 6894461523,
+			  "BookTitle": "Go",
+			  "authorId": 1,
+			  "price": 550,
+			  "availableOn": "2017-11-26",
+			   "bookImage" : "img/books/3.png"
+			},
+			{
+			  "ISBN": 1892561237,
+			  "BookTitle": "Let us C",
+			  "authorId": 2,
+			  "price": 550,
+			  "availableOn": "2016-07-26",
+			   "bookImage" : "img/books/4.png"
+			},
+			{
+			  "ISBN": 7895521237,
+			  "BookTitle": "Dune",
+			  "authorId": 5,
+			  "price": 4500,
+			  "availableOn": "2017-01-01",
+			   "bookImage" : "img/books/5.jpg"
+			},
+			{
+			  "ISBN": 6892520237,
+			  "BookTitle": "Ender`s Game",
+			  "authorId": 6,
+			  "price": 1200,
+			  "availableOn": "2017-03-02",
+			   "bookImage" : "img/books/6.jpg"
+			},
+			{
+			  "ISBN": 1290520237,
+			  "BookTitle": "Gone Girl",
+			  "authorId": 7,
+			  "price": 600,
+			  "availableOn": "2017-02-01",
+			   "bookImage" : "img/books/7.jpg"
+			},
+			{
+			  "ISBN": 7295520537,
+			  "BookTitle": "Sharp Object",
+			  "authorId": 7,
+			  "price": 1600,
+			  "availableOn": "2017-02-01",
+			   "bookImage" : "img/books/7.png"
+			}
+		],
+		
+	"Authors":[
+		{
+			"Id": 0,
+			"AuthorName": "Dennis Ritchie", 
+			"Email": "dennis.ritchie@c.com",
+			"Department": "Programming",
+			"Website": "c.com",
+			"Skills": "scientist",
+			"DisplayPicture": "img/authors/0.jpg"
+		},
+		
+		{
+			"Id": 1,
+			"AuthorName": "Google", 
+			"Email": "google@gmail.com",
+			"Department": "Programming",
+			"Website": "www.google.com",
+			"Skills": "Website",
+			"DisplayPicture": "img/authors/1.png"
+		},
+		
+		{
+			"Id": 2,
+			"AuthorName": "Y Kentakar", 
+			"Email": "y.Kentakar@letusc.com",
+			"Department": "Programming",
+			"Website": "letusc.com",
+			"Skills": "professor",
+			"DisplayPicture": "img/authors/2.jpg"
+		},
+		{
+			"Id": 3,
+			"AuthorName": "William H Crouse", 
+			"Email": "williamhcrouse@gmail.com",
+			"Department": "Engineering",
+			"Website": "automativemechanics.com",
+			"Skills": "professor",
+			"DisplayPicture": "img/authors/3.jpg"
+		},
+		{
+			"Id": 4,
+			"AuthorName": "Swami Vivekananda", 
+			"Email": "swamivivekanada@gmail.com",
+			"Department": "Religion",
+			"Website": "swamivivekananda.com",
+			"Skills": "Philospher",
+			"DisplayPicture": "img/authors/4.jpg"
+		},
+		
+		{
+			"Id": 5,
+			"AuthorName": "Frank Herbert", 
+			"Email": "Frank@gmail.com",
+			"Department": "Science",
+			"Website": "dune.com",
+			"Skills": "Writer",
+			"DisplayPicture": "img/authors/5.jpg"
+		},
+		
+		{
+			"Id": 6,
+			"AuthorName": "Orbson Scottcard", 
+			"Email": "orbson@scottcard.io",
+			"Department": "Science",
+			"Website": "orbsonscottcard.com",
+			"Skills": "Writer",
+			"DisplayPicture": "img/authors/7.jpg"
+		},
+		
+		{
+			"Id": 7,
+			"AuthorName": "Gillian Flynn", 
+			"Email": "Gillian@Flynncard.org",
+			"Department": "Thriller",
+			"Website": "gflynn.com",
+			"Skills": "Writer",
+			"DisplayPicture": "img/authors/6.jpg"
+		}
+		
+	]
+}
+}

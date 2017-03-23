@@ -1,0 +1,92 @@
+<div ng-controller = "bookdetailscontroller" ng-init = "toggleEditOption = false; deletebox = false">
+	<div class = "panel panel-primary">
+		<div class = "panel-heading">
+					Book Details.
+		</div>
+		<div class = "panel-body">
+			<div class = "row detailSection">
+				<div class = "bookpicture col-md-4 col-lg-4 col-md-offset-0 col-xs-offset-2">
+				<figure>
+						<img ng-hide = "noImageFound" src = "{{book.bookImage}}" alt = "{{book.BookTitle}}" class = "bookPic img-thumbnail" width ="200px"/>
+				</figure>
+				</div>		
+				<div class = " col-md-8 col-xs-10 col-md-offset-0 col-xs-offset-1">
+					<div class = "row">
+							<span  class = "col-md-6 col-xs-12"> BookTitle: </span>
+							<span  class = "col-md-6 col-xs-12" ng-bind = "book.BookTitle"></span>
+					</div>
+					<div class = "row">
+						<span class = "col-md-6 col-xs-12">AuthorName: </span>
+						<span  class = "col-md-6 col-xs-12"ng-bind = "authorName"></span>
+					</div>
+					<div class = "row">
+						<span class = "col-md-6 col-xs-12">Price: </span>
+						<span class = "col-md-6 col-xs-12">{{book.price | currency:"\u20B9":0}} </span>
+					</div>
+					<div class = "row">
+						<span class = "col-md-6 col-xs-12">Available On: </span>
+						<span class = "col-md-6 col-xs-12">{{book.availableOn | date:'dd-MMM-yyyy'}}</span>
+					</div>
+					<span  class = " btn btn-primary" ng-click = "toggleEditOption = toggleEditOption == false?true:false">
+						<span class = "glyphicon glyphicon-pencil"></span>
+							
+								Edit
+						</span>
+				</div>
+			</div>
+			<form name = "bookeditform" novalidate>
+				<div class = "row " ng-show = "toggleEditOption">
+					<div class =" editSection col-md-10 col-xs-10 col-lg-10  col-lg-offset-1 col-md-offset-1 col-xs-offset-1 form-group">
+						<div class = "form-group">
+							<label> Book Title: </label> 
+							<input class = "form-control" ng-model = "editbook.BookTitle" />
+						</div>
+						<div class = "form-group">
+							<label>Author Name:</label>
+							<select ng-change = "authorNotChanged = false" name = "authorlist" class = "form-control" ng-model = "newAuthorId">
+								<option value = ''>Select Author</option>
+								<option  value = "{{x.Id}}">{{x.AuthorName}}</option>
+							</select>
+						</div>
+						
+						
+						<div class = "form-group">
+							<label>Price: </label> 
+							<input class = "form-control"  ng-model = "editbook.price" />
+						</div>
+						
+						
+						<div class = "form-group">
+							<label>Available On: </label>
+							<div flex-gt-xs>
+								<md-datepicker ng-model="editbook.availableOn" md-placeholder="Enter date" md-min-date="minDate"></md-datepicker>
+							</div>
+						</div>
+						<button class = "col-md-3 col-xl-3 col-lg-3" ng-disabled = "true">
+							<a ng-click = "saveDetails()" href = "#/" class = "saveLink btn btn-success" >
+							<span class = "glyphicon glyphicon-floppy-disk"></span>
+							Save Book
+							</a>
+						</button>
+						<div class = "col-md-2 col-xl-2 col-lg-3">
+							<md-button  ng-click = "deleteBook($event)" class = "cancelLink btn btn-danger" style ="margin:0" >
+								<span class = "glyphicon glyphicon-remove-circle"></span>
+									delete this book
+							</md-button>
+						</div>	
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!--
+			<div class = "row">
+				<div class = "deletebox" ng-show = "deletebox">
+					Are you sure you want to delete this book from libary?
+					<input  class = "cancelLink btn btn-danger" type = "button"  value = "Yes" ng-click = "deleteBook()"/>
+					<input class = "saveLink btn btn-success" type = "button"  value = "No"/>
+				</div>
+			</div>-->
+

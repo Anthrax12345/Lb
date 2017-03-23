@@ -1,0 +1,9 @@
+/* For material design button removing margin so it align properly. */
+
+md-button {
+    margin: 0 !IMPORTANT;
+}
+
+.md-button:not([disabled]):hover {
+    background-color: rgba(#c9302c, 0.7);
+}

@@ -1,0 +1,75 @@
+<!-- Add Book Section -->
+<section class =" boxView col-md-11 col-xs-12 col-md-offset-1" ng-controller = "newbookcontroller">
+		<form class = "col-md-7 col-xs-12 col-md-offset-1" ng-model = "newBook" name = "myForm" novalidate>
+			
+			
+			
+			<div class = "form-group">
+				<label for ="bookIsbn">
+					ISBN<span class = "redmarker glyphicon glyphicon-asterisk"></span>
+				</label>
+				<input class = "form-control" id = "bookIsbn" placeholder = "Book ISBN" ng-model = "newBook.ISBN" name = "ISBN" type = "number" ng-minlength = "10" required ng-blur = "checkISBN()"/>
+				
+				<span class = "error-class" ng-show = "myForm.ISBN.$touched">
+					<span  class = "error-class" ng-show = "myForm.ISBN.$invalid">Invalid ISBN</span>
+				</span>
+				<span  ng-show = "duplicateISBN">Duplicate ISBN found: click  <a href = "#bookdetails"ng-click = "bookRedirect()">here </a> to go to book</span>
+			</div>
+			
+			
+			
+			
+			<div class = "form-group">
+				<label for ="bookTitle">
+					Book Title<span class = "redmarker glyphicon glyphicon-asterisk"></span>
+				</label>
+				<input type = "text" name = "TITLE"class = "form-control" id = "bookTitle" placeholder = "Book Title" ng-model = "newBook.BookTitle" ng-minlength = "3" required/>
+					<span class = "error-class"  ng-show = "myForm.TITLE.$touched && myForm.TITLE.$invalid">
+						Enter book title.
+					</span>
+			</div>
+			<div class = "form-group">
+				<label for ="bookAuthor">
+					Book Author<span class = "redmarker glyphicon glyphicon-asterisk"></span>
+				</label>
+				<select ng-model = "newBook.authorId" class = "form-control">
+				<option value = "">Select a author or add new author  using link given below.</option>
+				<option ng-repeat = "x in authors" value = "{{authors.indexOf(x)}}">{{x.AuthorName}}</option>
+				
+			</select><a href = "#addnewauthor">Add new author</a>
+			</div>
+			<div class = "form-group">
+				<label for ="bookPrice">
+					Book Price<span class = "redmarker glyphicon glyphicon-asterisk"></span>
+				</label>
+				<input class = "form-control" id = "bookPrice"  placeholder = "Book Price" ng-model = "newBook.price" type = "number" min = "0"/>
+			</div>
+			<div class = "form-group">
+				<label for ="bookAvailableOn">
+					Available On
+				</label>
+				<div layout-gt-xs="row">
+					<div flex-gt-xs>
+						<md-datepicker ng-model="newBook.availableOn" md-placeholder="Enter date" md-min-date="minDate"></md-datepicker>
+					</div>
+				</div>
+			</div>
+			<div>
+			<button ng-click = "addBook()" class = "btn btn-success" ng-disabled = "myForm.TITLE.$invalid || myForm.ISBN.$invalid">
+				<span class = "glyphicon glyphicon-floppy-disk"></span>
+				Add Book.
+			</div>
+			
+		<div>
+			<span> 
+				Field mark with 
+					<span class = "redmarker glyphicon glyphicon-asterisk"></span>
+				are manadatory.
+			</span>
+		</div>
+		
+		</div>
+		</form>
+		
+</section>
+<!-- End of Add new books section -->

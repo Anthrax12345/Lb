@@ -1,0 +1,33 @@
+@import 'variables/_colors.scss';
+.searchArea {
+    margin-bottom: 10px;
+    border: solid 3px #ccc;
+    border-radius: 10px;
+    span {
+        color: red;
+        button {
+            background-color: #fff;
+            margin-right: 2px;
+        }
+    }
+    input {
+        border: none;
+        color: $embercolor;
+        font-size: 20px;
+        font-family: "Times New Roman", Georgia, Serif;
+    }
+    input:focus {
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0), 0 0 0px rgba(0, 0, 0, 0);
+    }
+    .searchIcon {
+        background-color: #fff;
+        padding-left: 10px;
+        border: none;
+    }
+    &:active,
+    &:hover {
+        /*box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0
+0 8px rgba(102,175,233,.6);*/
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(225, 100, 0, 0.78);
+    }
+}
